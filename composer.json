@@ -1,0 +1,48 @@
+{
+  "name": "trash-panda/m2-cron-job-modifier",
+  "description": "Disable cron jobs provided by Magento 2 or other modules or move them to other groups",
+  "type": "magento2-module",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aydin Hassan",
+      "email": "aydin@hotmail.co.uk"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.magento.com/"
+    }
+  ],
+  "require": {
+    "php" : "^7.3",
+    "magento/framework": "^101.0|^102.0",
+    "magento/module-cron": "^100"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "TrashPanda\\CronJobModifier\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TrashPanda\\CronJobModifierTest\\": "test"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@unit-tests",
+      "@cs"
+    ],
+    "cs": "phpcs -s src --standard=PSR12 --extensions=php && phpcs -s test --standard=PSR12 --extensions=php",
+    "cs-fix": "phpcbf -s src --standard=PSR12 && phpcbf -s src --standard=PSR12",
+    "unit-tests": "phpunit --colors=always",
+    "unit-tests-coverage": "phpunit --colors=always -v --coverage-text"
+  }
+}
