@@ -208,7 +208,7 @@ class DisableCronJobsTest extends TestCase
                             'non-existing-job' => 'scconnector',
                         ]
                     ]
-               ][$action];
+                ][$action];
             });
 
         $cronConfig = $this->createMock(\Magento\Cron\Model\Config::class);
@@ -241,7 +241,7 @@ class DisableCronJobsTest extends TestCase
                             'my-job' => 'non-existing-group',
                         ]
                     ]
-               ][$action];
+                ][$action];
             });
 
         $cronConfig = $this->createMock(\Magento\Cron\Model\Config::class);
