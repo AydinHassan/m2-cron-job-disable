@@ -10,7 +10,7 @@ use Magento\Framework\Module\Dir\Reader;
 
 class SchemaLocator implements SchemaLocatorInterface
 {
-    private const CONFIG_FILE_SCHEMA = 'cron_disable.xsd';
+    private const CONFIG_FILE_SCHEMA = 'cron_modify.xsd';
 
     private $schema;
 
@@ -18,7 +18,7 @@ class SchemaLocator implements SchemaLocatorInterface
     {
         $this->schema = sprintf(
             '%s/%s',
-            $moduleReader->getModuleDir(Dir::MODULE_ETC_DIR, 'TrashPanda_CronJobDisable'),
+            $moduleReader->getModuleDir(Dir::MODULE_ETC_DIR, 'TrashPanda_CronJobModifier'),
             self::CONFIG_FILE_SCHEMA
         );
     }
