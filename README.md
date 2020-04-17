@@ -19,11 +19,6 @@ $ php bin/magento setup:upgrade
 
 You will need to create a module and add a `cron_modify.xml` file in to the `etc` directory.
 
-```xml
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:TrashPanda_CronJobModify:etc/cron_modify.xsd">
-</config>
-```
-
 ### Remove a cron job
 
 To remove a cron job, create a group node and use the name attribute to specify the group. Then specify the jobs to
